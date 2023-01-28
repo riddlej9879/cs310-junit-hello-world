@@ -17,7 +17,12 @@ public class Main {
     }
     
     public String reverse(String message) {
+        StringBuilder result = new StringBuilder(message.length());
+        String[] msg = message.split("");
+        for (int i = msg.length; i > 0; i--) {
+            result.append(msg[i-1]);
+        }
+        message = result.toString();
         return message;
     }
-    
 }
